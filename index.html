@@ -4,7 +4,157 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorando o Espaço Sideral 🌌🚀</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: white;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0b1a3e;
+            color: #FFD700;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar nav a:hover {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+
+        main {
+            padding: 40px;
+            background-image: url('https://images.unsplash.com/photo-1518987324007-f1b57f6e7bc6'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            color: #FFD700;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .info-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .info-section ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .info-section ul li strong {
+            color: #FFD700;
+        }
+
+        .info-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #0b1a3e;
+            padding: 30px 20px;
+            text-align: center;
+            color: #FFD700;
+            font-size: 1.1rem;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer p {
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .card {
+            background-color: rgba(255, 215, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .card ul li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .navbar nav a {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .info-section {
+                padding: 20px;
+            }
+
+            .card {
+                margin: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,6 +166,7 @@
                 <a href="#estrelas">Estrelas</a>
                 <a href="#buracos-negros">Buracos Negros</a>
                 <a href="#curiosidades">Curiosidades</a>
+                <a href="#curiosidades">Futuras Missões</a>
             </nav>
         </div>
     </header>
@@ -24,47 +175,69 @@
         <section id="galaxias" class="info-section">
             <h2>Galáxias 🪐</h2>
             <p>O Universo é repleto de <strong>galáxias</strong>, enormes aglomerados de estrelas, poeira, gás e matéria escura. Algumas das mais famosas incluem:</p>
-            <ul>
-                <li><strong>Via Láctea</strong> - A nossa casa galáctica! 🌌</li>
-                <li><strong>Andrômeda</strong> - A galáxia mais próxima da nossa! 🪐</li>
-                <li><strong>Sombrero</strong> - Uma galáxia em forma de disco com uma visão impressionante! 🌟</li>
-            </ul>
+            <div class="card">
+                <h3>Via Láctea 🌌</h3>
+                <p>A nossa galáxia, com mais de 100 bilhões de estrelas, é uma das mais conhecidas e estudadas. Ela contém o Sistema Solar e é uma galáxia espiral barrada.</p>
+            </div>
+            <div class="card">
+                <h3>Andrômeda 🪐</h3>
+                <p>Andrômeda é a galáxia espiral mais próxima da nossa. Está a aproximadamente 2.5 milhões de anos-luz de distância.</p>
+            </div>
+            <div class="card">
+                <h3>Sombrero 🌠</h3>
+                <p>A galáxia Sombrero tem a forma de um grande disco, com um núcleo brilhante e é uma das galáxias mais impressionantes observadas até hoje.</p>
+            </div>
         </section>
 
         <section id="planetas" class="info-section">
             <h2>Planetas 🌍</h2>
             <p>Os planetas são corpos celestes que orbitam uma estrela. Alguns dos planetas do nosso sistema solar incluem:</p>
-            <ul>
-                <li><strong>Mercúrio</strong> - O planeta mais próximo do Sol! ☀️</li>
-                <li><strong>Vênus</strong> - A "irmã" da Terra, mas muito mais quente! 🌋</li>
-                <li><strong>Terra</strong> - Nosso planeta azul! 🌍</li>
-                <li><strong>Marte</strong> - O planeta vermelho, possível alvo de futuras missões! 🛸</li>
-                <li><strong>Júpiter</strong> - O gigante gasoso! 🌠</li>
-            </ul>
+            <div class="card">
+                <h3>Mercúrio ☀️</h3>
+                <p>O planeta mais próximo do Sol, Mercúrio é um mundo árido e sem atmosfera densa, com temperaturas extremas.</p>
+            </div>
+            <div class="card">
+                <h3>Vênus 🌋</h3>
+                <p>Conhecido como a "irmã" da Terra, Vênus tem um clima infernal devido ao seu efeito estufa descontrolado.</p>
+            </div>
+            <div class="card">
+                <h3>Terra 🌍</h3>
+                <p>Nosso planeta, o único conhecido a abrigar vida, com uma atmosfera rica em oxigênio e água em estado líquido.</p>
+            </div>
         </section>
 
         <section id="estrelas" class="info-section">
             <h2>Estrelas 🌟</h2>
-            <p>As estrelas são esferas gigantes de plasma, mantidas juntas pela gravidade. Algumas das mais famosas incluem:</p>
-            <ul>
-                <li><strong>Sirius</strong> - A estrela mais brilhante do céu! ✨</li>
-                <li><strong>Betelgeuse</strong> - Uma supergigante vermelha! 🔴</li>
-                <li><strong>Sol</strong> - A nossa estrela, fonte de toda a energia da Terra! 🌞</li>
-            </ul>
+            <p>As estrelas são enormes esferas de plasma que emitem luz e calor. Algumas das mais famosas incluem:</p>
+            <div class="card">
+                <h3>Sirius ✨</h3>
+                <p>Sirius é a estrela mais brilhante do céu, localizada na constelação do Cão Maior. Ela é uma estrela binária, composta por Sirius A e Sirius B.</p>
+            </div>
+            <div class="card">
+                <h3>Betelgeuse 🔴</h3>
+                <p>Uma supergigante vermelha na constelação de Órion. Betelgeuse está prestes a se tornar uma supernova.</p>
+            </div>
+            <div class="card">
+                <h3>Sol 🌞</h3>
+                <p>A nossa estrela, o Sol, fornece luz e energia à Terra. Ele está no meio da sua vida útil e possui um núcleo a mais de 15 milhões de graus Celsius.</p>
+            </div>
         </section>
 
         <section id="buracos-negros" class="info-section">
             <h2>Buracos Negros 🕳️</h2>
-            <p>Os <strong>buracos negros</strong> são regiões no espaço onde a gravidade é tão forte que nada, nem mesmo a luz, pode escapar. Eles podem ser encontrados no centro de muitas galáxias!</p>
+            <p>Buracos negros são regiões do espaço onde a gravidade é tão intensa que nada pode escapar, nem mesmo a luz!</p>
+            <div class="card">
+                <h3>Buraco Negro Supermassivo 🌑</h3>
+                <p>Localizados nos centros de muitas galáxias, esses buracos negros possuem uma massa milhões de vezes maior que a do Sol.</p>
+            </div>
         </section>
 
         <section id="curiosidades" class="info-section">
             <h2>Curiosidades do Espaço 👽</h2>
             <ul>
-                <li>Você sabia que o espaço não tem som? O som precisa de um meio para viajar, como o ar, e no espaço há vácuo! 🧑‍🚀</li>
-                <li>O maior planeta do sistema solar é Júpiter, e ele tem mais de 75 luas! 🌕</li>
-                <li>Uma "dizimação" no espaço pode durar bilhões de anos! 🔭</li>
-                <li>A maior estrela conhecida é a UY Scuti, que é mais de 1700 vezes maior que o Sol! 🌠</li>
+                <li>O espaço não tem som! O som precisa de um meio para se propagar, como o ar, e no espaço há vácuo! 🎧</li>
+                <li>O maior planeta do sistema solar é Júpiter, com mais de 75 luas! 🌙</li>
+                <li>O maior conhecido buraco negro supermassivo está no centro da galáxia M87! 🌑</li>
             </ul>
         </section>
     </main>
