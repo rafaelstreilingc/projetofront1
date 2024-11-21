@@ -3,35 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema Solar - Exploração Espacial</title>
-
-    <!-- Importação das fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
-        /* Resetando as margens e preenchimentos padrão */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Definindo a fonte para o corpo do site */
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #121212; /* Fundo escuro */
+            background-color: #121212;
             color: #fff;
             line-height: 1.6;
         }
 
-        /* Estilo para o título */
         h1, h2 {
             font-family: 'Poppins', sans-serif;
-            color: #ffdd57; /* Cor dourada para títulos */
+            color: #ffdd57;
         }
 
-        /* Navbar */
         nav {
             background-color: #333;
             padding: 20px;
@@ -39,7 +32,7 @@
         }
 
         nav a {
-            color: #ffdd57; /* Cor dourada para os links da navbar */
+            color: #ffdd57;
             text-decoration: none;
             font-size: 1.2rem;
             margin: 0 15px;
@@ -50,7 +43,6 @@
             color: #fff;
         }
 
-        /* Estilo da section dos planetas */
         section {
             padding: 40px;
             margin: 20px;
@@ -60,19 +52,11 @@
         }
 
         .planet-section img {
-            width: 150px; /* Ajustando as imagens para um tamanho menor */
+            width: 150px;
             height: 150px;
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin: 20px auto;
             display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .planet-section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
         }
 
         .planet-section ul {
@@ -86,32 +70,10 @@
         .planet-section ul li strong {
             color: #ffdd57;
         }
-
-        /* Seção de planetas anões */
-        #planetas-anoes {
-            background-color: #2c2c2c;
-        }
-
-        /* Rodapé */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        footer p {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav>
         <a href="#mercurio">Mercúrio</a>
         <a href="#venus">Vênus</a>
@@ -125,136 +87,96 @@
     </nav>
 
     <main>
-        <!-- Seção sobre Mercúrio -->
         <section id="mercurio" class="planet-section">
             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/3D_Mercury.png" alt="Mercúrio">
-            <h2>Mercúrio 🪐</h2>
-            <p>Mercúrio é o planeta mais próximo do Sol e o menor do Sistema Solar. Sua superfície é repleta de crateras, semelhante à da Lua.</p>
-            <ul>
-                <li><strong>Composição:</strong> Rocosa, composta principalmente de ferro.</li>
-                <li><strong>Atmosfera:</strong> Muito fina, composta por oxigênio, sódio, hidrogênio e outros gases.</li>
-                <li><strong>Características:</strong> Alta variação de temperatura devido à falta de atmosfera densa.</li>
-                <li><strong>Órbita:</strong> 88 dias para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 57,9 milhões de km.</li>
-                <li><strong>Curiosidades:</strong> Mercúrio não possui satélites naturais.</li>
-            </ul>
+            <h2>Mercúrio</h2>
+            <p>
+                Mercúrio é o menor planeta do Sistema Solar e o mais próximo do Sol. 
+                Sua superfície está coberta por crateras, muito semelhante à da Lua. 
+                Durante o dia, as temperaturas podem ultrapassar 400°C, mas à noite caem para -180°C devido à falta de atmosfera significativa.
+                Mercúrio não possui luas e tem um movimento de rotação muito lento em comparação com seu movimento orbital.
+            </p>
         </section>
 
-        <!-- Seção sobre Vênus -->
         <section id="venus" class="planet-section">
-            <img src="https://png.pngtree.com/png-vector/20240125/ourmid/pngtree-beautiful-planet-venus-png-image_11492992.png" alt="Vênus">
-            <h2>Vênus 🌟</h2>
-            <p>Vênus é o planeta mais parecido com a Terra em tamanho e composição, mas sua atmosfera é extremamente densa e quente, causando um efeito estufa forte.</p>
-            <ul>
-                <li><strong>Composição:</strong> Rochosa, com uma superfície composta por rochas e metais derretidos.</li>
-                <li><strong>Atmosfera:</strong> Principalmente dióxido de carbono, com nuvens de ácido sulfúrico.</li>
-                <li><strong>Características:</strong> Temperaturas extremamente altas, superiores às de Mercúrio.</li>
-                <li><strong>Órbita:</strong> 225 dias para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 108,2 milhões de km.</li>
-                <li><strong>Curiosidades:</strong> Vênus gira no sentido oposto ao da maioria dos planetas.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.png" alt="Vênus">
+            <h2>Vênus</h2>
+            <p>
+                Vênus é o planeta mais quente do Sistema Solar, com temperaturas que chegam a 470°C em função de um forte efeito estufa.
+                Sua atmosfera é composta majoritariamente de dióxido de carbono, com nuvens de ácido sulfúrico.
+                Apesar de ser semelhante em tamanho e composição à Terra, sua superfície é extremamente hostil. 
+                Curiosamente, ele gira no sentido contrário à maioria dos planetas.
+            </p>
         </section>
 
-        <!-- Seção sobre Terra -->
         <section id="terra" class="planet-section">
-            <img src="https://i.pinimg.com/originals/11/3d/93/113d937e06fcdd28172766336578c87d.png" alt="Terra">
-            <h2>Terra 🌍</h2>
-            <p>A Terra é o único planeta conhecido que possui vida. Sua atmosfera composta de oxigênio, nitrogênio e outros gases a torna única entre os planetas do Sistema Solar.</p>
-            <ul>
-                <li><strong>Composição:</strong> Crosta rochosa e núcleo metálico.</li>
-                <li><strong>Atmosfera:</strong> 78% de nitrogênio, 21% de oxigênio, e outros gases como dióxido de carbono e argônio.</li>
-                <li><strong>Características:</strong> Presença de água líquida e clima moderado.</li>
-                <li><strong>Órbita:</strong> 365,25 dias para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 149,6 milhões de km.</li>
-                <li><strong>Curiosidades:</strong> A Terra possui uma única lua e é o único planeta conhecido que tem vida.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Earth_eastern_hemisphere.jpg" alt="Terra">
+            <h2>Terra</h2>
+            <p>
+                A Terra é o único planeta conhecido que possui vida, graças à combinação de água líquida, atmosfera rica em oxigênio e temperatura moderada.
+                Sua superfície é composta por 71% de água e 29% de terra firme, sendo habitada por milhões de espécies. 
+                Possui um satélite natural, a Lua, que influencia suas marés e estabilidade orbital.
+            </p>
         </section>
 
-        <!-- Seção sobre Marte -->
         <section id="marte" class="planet-section">
-            <img src="https://pngimg.com/d/mars_planet_PNG7.png" alt="Marte">
-            <h2>Marte 🔴</h2>
-            <p>Marte é conhecido como o "planeta vermelho" devido à cor de sua superfície, que é rica em óxidos de ferro. Marte possui uma atmosfera muito fina e temperaturas muito baixas, mas está entre os principais candidatos para futuras missões de exploração humana.</p>
-            <ul>
-                <li><strong>Composição:</strong> Crosta rochosa e presença de vulcões e vales profundos.</li>
-                <li><strong>Atmosfera:</strong> Composta principalmente por dióxido de carbono.</li>
-                <li><strong>Características:</strong> Gelo nas calotas polares e a maior montanha do Sistema Solar.</li>
-                <li><strong>Órbita:</strong> 687 dias para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 227,9 milhões de km.</li>
-                <li><strong>Curiosidades:</strong> Marte possui duas luas, Fobos e Deimos.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/3D_Mars.png" alt="Marte">
+            <h2>Marte</h2>
+            <p>
+                Marte é chamado de "Planeta Vermelho" por causa do óxido de ferro em sua superfície. 
+                É o segundo menor planeta do Sistema Solar e possui as maiores montanhas e cânions conhecidos, como o Monte Olimpo. 
+                Acredita-se que tenha abrigado água líquida no passado, e pesquisas continuam buscando sinais de vida microbiana.
+            </p>
         </section>
-
-        <!-- Seção sobre os planetas gigantes: Júpiter, Saturno, Urano, Netuno -->
 
         <section id="jupiter" class="planet-section">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/021/877/519/small_2x/jupiter-on-a-transparent-background-png.png" alt="Júpiter">
-            <h2>Júpiter ♃</h2>
-            <p>Júpiter é o maior planeta do Sistema Solar. Ele é um gigante gasoso com uma atmosfera composta principalmente de hidrogênio e hélio.</p>
-            <ul>
-                <li><strong>Composição:</strong> Gigante gasoso, sem superfície sólida definida.</li>
-                <li><strong>Atmosfera:</strong> Principalmente hidrogênio e hélio, com manchas escuras e tempestades intensas.</li>
-                <li><strong>Características:</strong> Possui uma Grande Mancha Vermelha, uma tempestade que dura séculos.</li>
-                <li><strong>Órbita:</strong> 12 anos terrestres para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 778,5 milhões de km.</li>
-                <li><strong>Curiosidades:</strong> Júpiter tem 79 luas conhecidas.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Jupiter.jpg" alt="Júpiter">
+            <h2>Júpiter</h2>
+            <p>
+                Júpiter é o maior planeta do Sistema Solar, conhecido por sua Grande Mancha Vermelha, uma tempestade gigantesca que dura há séculos.
+                Ele possui 79 luas confirmadas, incluindo as quatro principais: Io, Europa, Ganimedes e Calisto. 
+                Júpiter é composto principalmente de hidrogênio e hélio, com uma fina camada externa de gases.
+            </p>
         </section>
 
         <section id="saturno" class="planet-section">
-            <img src="https://png.pngtree.com/png-vector/20240309/ourmid/pngtree-beautiful-planet-saturn-png-image_11898581.png" alt="Saturno">
-            <h2>Saturno ♄</h2>
-            <p>Saturno é famoso por seus anéis espetaculares, compostos principalmente de gelo e rocha. É o segundo maior planeta do Sistema Solar.</p>
-            <ul>
-                <li><strong>Composição:</strong> Também um gigante gasoso, principalmente hidrogênio e hélio.</li>
-                <li><strong>Atmosfera:</strong> Composta por hidrogênio, hélio e outros gases.</li>
-                <li><strong>Características:</strong> Possui sistemas de anéis impressionantes, com mais de 60 luas.</li>
-                <li><strong>Órbita:</strong> 29,5 anos terrestres para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 1,429 bilhões de km.</li>
-                <li><strong>Curiosidades:</strong> Saturno tem anéis que são visíveis a partir da Terra com telescópio.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Saturn_during_Equinox.jpg" alt="Saturno">
+            <h2>Saturno</h2>
+            <p>
+                Saturno é famoso por seus anéis impressionantes compostos de partículas de gelo, rocha e poeira. 
+                É o segundo maior planeta do Sistema Solar e é composto principalmente de hidrogênio e hélio. 
+                Sua lua Titã é maior que o planeta Mercúrio e possui uma atmosfera densa e rios de metano.
+            </p>
         </section>
 
         <section id="urano" class="planet-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Uranus2-transparent.png" alt="Urano">
-            <h2>Urano ♅</h2>
-            <p>Urano é um planeta gelado, famoso por seu eixo de rotação inclinado. Sua atmosfera contém hidrogênio, hélio e metano.</p>
-            <ul>
-                <li><strong>Composição:</strong> Principalmente hidrogênio e hélio, com uma grande quantidade de água, amônia e metano.</li>
-                <li><strong>Atmosfera:</strong> Atmosfera azul devido ao metano presente, que absorve luz vermelha.</li>
-                <li><strong>Características:</strong> Urano tem anéis e 27 luas conhecidas.</li>
-                <li><strong>Órbita:</strong> 84 anos terrestres para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 2,9 bilhões de km.</li>
-                <li><strong>Curiosidades:</strong> Urano é o único planeta que gira de lado.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg" alt="Urano">
+            <h2>Urano</h2>
+            <p>
+                Urano é um gigante gasoso que gira quase deitado em seu eixo, um fenômeno único no Sistema Solar.
+                Sua coloração azul-esverdeada é causada pela presença de metano na atmosfera.
+                É conhecido por ter ventos extremamente rápidos e por ser o planeta mais frio, com temperaturas que chegam a -224°C.
+            </p>
         </section>
 
         <section id="netuno" class="planet-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Neptune_cutout.png/1200px-Neptune_cutout.png" alt="Netuno">
-            <h2>Netuno ♆</h2>
-            <p>Netuno é o planeta mais distante do Sistema Solar. Sua atmosfera é composta de hidrogênio, hélio e metano, e é conhecido pelos ventos mais rápidos do Sistema Solar.</p>
-            <ul>
-                <li><strong>Composição:</strong> Principalmente hidrogênio, hélio e metano, com uma camada de água, amônia e gelo.</li>
-                <li><strong>Atmosfera:</strong> É um planeta de cor azul devido ao metano na atmosfera.</li>
-                <li><strong>Características:</strong> Netuno tem 14 luas e ventos extremamente rápidos.</li>
-                <li><strong>Órbita:</strong> 165 anos terrestres para completar uma volta ao redor do Sol.</li>
-                <li><strong>Distância do Sol:</strong> 4,5 bilhões de km.</li>
-                <li><strong>Curiosidades:</strong> Netuno foi o último planeta descoberto no Sistema Solar.</li>
-            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg" alt="Netuno">
+            <h2>Netuno</h2>
+            <p>
+                Netuno é o planeta mais distante do Sol e é conhecido por seus ventos fortíssimos, que podem ultrapassar 2.000 km/h.
+                Ele possui um tom azul vibrante devido ao metano em sua atmosfera. 
+                Tritão, sua maior lua, tem atividade geológica ativa e é um dos corpos celestes mais frios do Sistema Solar.
+            </p>
         </section>
 
-        <!-- Seção dos planetas anões -->
         <section id="planetas-anoes" class="planet-section">
-            <h2>Planetas Anões 🪐</h2>
-            <ul>
-                <li><strong>Plutão:</strong> Antigo nono planeta do Sistema Solar, agora considerado um planeta anão.</li>
-                <li><strong>Ceres:</strong> O maior objeto no cinturão de asteroides entre Marte e Júpiter.</li>
-                <li><strong>Haumea:</strong> Localizado além de Netuno, com forma alongada.</li>
-                <li><strong>Makemake:</strong> Encontrado no cinturão de Kuiper, uma região além de Netuno.</li>
-                <li><strong>Eris:</strong> Localizado além de Plutão, em uma região do espaço chamada de disco disperso.</li>
-            </ul>
+            <h2>Planetas Anões</h2>
+            <p>
+                Os planetas anões, como Plutão, Ceres, Haumea, Makemake e Éris, são menores que os planetas principais e não conseguiram "limpar" sua órbita.
+                Plutão foi reclassificado como planeta anão em 2006, mas continua fascinando astrônomos por seu complexo sistema de luas e atmosfera sazonal.
+                Ceres, no cinturão de asteroides, contém indícios de água congelada e Haumea é único por seu formato ovalado.
+            </p>
         </section>
-
     </main>
 </body>
 </html>
