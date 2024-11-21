@@ -5,104 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planetas do Sistema Solar 🌌</title>
     <style>
-        /* Resetando margens e padding de todos os elementos para garantir consistência */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Estilo geral da página */
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #111;
-            color: white;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #1c1c1c, #4a4a4a);
+            color: #fff;
             line-height: 1.6;
             padding: 0;
             transition: background-color 0.3s ease;
+            overflow-x: hidden;
         }
 
-        /* Estilo do cabeçalho */
         header {
-            background-color: #0b1a3e;
+            background: #111;
             color: #FFD700;
-            padding: 30px 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            padding: 40px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
         }
 
-        /* Estilo da navegação (Navbar) */
         .navbar {
-            background-color: #1a2b47; /* Azul escuro para o fundo da navbar */
-            padding: 10px 0; /* Espaçamento de 10px acima e abaixo */
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+            background: #222;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }
 
         .navbar nav {
             display: flex;
-            justify-content: center; /* Centraliza os links */
-            align-items: center;
+            justify-content: center;
         }
 
         .navbar nav a {
             text-decoration: none;
             color: #FFD700;
             font-size: 1.2rem;
-            margin: 0 25px; /* Espaçamento maior entre os links */
-            padding: 12px 18px; /* Aumenta o espaço dentro dos links */
-            border-radius: 50px; /* Borda arredondada nos links */
-            transition: all 0.3s ease; /* Transição suave para os efeitos */
+            margin: 0 20px;
+            padding: 10px 15px;
+            border-radius: 30px;
+            position: relative;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .navbar nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FFD700;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .navbar nav a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
 
         .navbar nav a:hover {
-            background-color: rgba(255, 215, 0, 0.2); /* Cor de fundo dourada ao passar o mouse */
-            transform: translateY(-5px); /* Efeito de "levitar" para dar interatividade */
+            color: #333;
+            background-color: #FFD700;
         }
 
-        /* Estilo principal da página */
         main {
-            padding: 40px;
-            background-image: url('https://images.unsplash.com/photo-1518987324007-f1b57f6e7bc6');
+            padding: 50px 20px;
+            background: url('https://images.unsplash.com/photo-1507565372040-7888f1d13a19?fit=crop&w=1500&h=1000&q=80') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            color: #fff;
         }
 
         h2 {
+            font-size: 2.5rem;
             color: #FFD700;
-            font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         .info-section {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 15px;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-            transition: transform 0.3s ease;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .info-section:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
         }
 
         .info-section ul {
             list-style-type: none;
             padding-left: 0;
+            margin-top: 20px;
         }
 
         .info-section ul li {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 15px;
-            line-height: 1.8;
         }
 
         .info-section ul li strong {
@@ -110,12 +131,13 @@
         }
 
         footer {
-            background-color: #0b1a3e;
-            padding: 30px 20px;
-            text-align: center;
+            background: #111;
             color: #FFD700;
-            font-size: 1.1rem;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+            font-size: 1rem;
+            font-weight: bold;
         }
 
         footer p {
@@ -126,11 +148,13 @@
     </style>
 </head>
 <body>
+
+    <!-- Cabeçalho -->
     <header>
         <h1>Planetas do Sistema Solar 🌌</h1>
     </header>
 
-    <!-- Navbar -->
+    <!-- Navegação -->
     <div class="navbar">
         <nav>
             <a href="#mercurio">Mercúrio</a>
@@ -144,107 +168,127 @@
         </nav>
     </div>
 
+    <!-- Seções do conteúdo -->
     <main>
+
         <!-- Seção sobre Mercúrio -->
         <section id="mercurio" class="info-section">
             <h2>Mercúrio 🌍</h2>
-            <p>Mercúrio é o planeta mais próximo do Sol e o menor do Sistema Solar. Sua superfície é coberta por crateras e rochas, e as temperaturas variam drasticamente, indo de -180°C à noite até 430°C durante o dia. Não tem lua, e sua rotação é extremamente lenta, com um dia de mais de 170 dias terrestres.</p>
+            <p>Mercúrio, o planeta mais próximo do Sol, é também o menor do Sistema Solar. Com uma atmosfera extremamente fina composta principalmente de oxigênio, sódio, hidrogênio, hélio e potássio, ele possui temperaturas extremas. Durante o dia, as temperaturas podem atingir até 430°C, enquanto à noite caem para -180°C. Mercúrio não tem luas, e sua rotação é muito lenta, levando 59 dias terrestres para completar um dia.</p>
             <ul>
-                <li><strong>Características:</strong> Superfície rochosa cheia de crateras e temperaturas extremas</li>
-                <li><strong>Temperatura:</strong> Extremas, de -180°C à 430°C</li>
+                <li><strong>Características:</strong> Superfície cheia de crateras e calotas polares</li>
+                <li><strong>Temperatura:</strong> Varia de -180°C à 430°C</li>
                 <li><strong>Distância do Sol:</strong> 57,9 milhões de km</li>
-                <li><strong>Órbita:</strong> 88 dias terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 88 dias terrestres</li>
+                <li><strong>Luvas:</strong> Nenhuma</li>
+                <li><strong>Descoberta:</strong> Conhecido desde a antiguidade, mas foi explorado mais detalhadamente por sondas como a MESSENGER.</li>
             </ul>
         </section>
 
         <!-- Seção sobre Vênus -->
         <section id="venus" class="info-section">
             <h2>Vênus 🌕</h2>
-            <p>Vênus é muitas vezes chamado de "irmão gêmeo" da Terra devido ao seu tamanho semelhante. No entanto, sua atmosfera é extremamente densa e composta principalmente por dióxido de carbono, o que cria um efeito estufa intenso. As temperaturas na superfície chegam a 470°C, mais quente que a superfície de Mercúrio, apesar de estar mais distante do Sol.</p>
+            <p>Vênus, o segundo planeta do Sistema Solar, tem uma atmosfera densa composta quase inteiramente por dióxido de carbono. A pressão atmosférica em Vênus é 92 vezes maior que a da Terra. Sua temperatura média é de cerca de 470°C, o suficiente para derreter chumbo, devido ao efeito estufa severo. Vênus é frequentemente chamado de "estrela da manhã" devido à sua luminosidade, mas sua rotação é retrograda, ou seja, gira na direção oposta à maioria dos planetas.</p>
             <ul>
-                <li><strong>Características:</strong> Atmosfera densa composta por CO₂, causando um efeito estufa extremo</li>
-                <li><strong>Temperatura:</strong> 470°C, suficiente para derreter chumbo</li>
+                <li><strong>Características:</strong> Atmosfera espessa com nuvens de ácido sulfúrico</li>
+                <li><strong>Temperatura:</strong> Média de 470°C</li>
                 <li><strong>Distância do Sol:</strong> 108,2 milhões de km</li>
-                <li><strong>Órbita:</strong> 225 dias terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 225 dias terrestres</li>
+                <li><strong>Luvas:</strong> Nenhuma</li>
+                <li><strong>Descoberta:</strong> Conhecido desde a antiguidade, Vênus foi explorado por várias sondas, incluindo a soviética Venera.</li>
             </ul>
         </section>
 
         <!-- Seção sobre a Terra -->
         <section id="terra" class="info-section">
             <h2>Terra 🌍</h2>
-            <p>A Terra é o único planeta conhecido a abrigar vida. Com uma atmosfera rica em oxigênio e água em estado líquido, a Terra possui uma temperatura média de 15°C. Sua lua tem grande influência nas marés e é o único satélite natural significativo. A Terra gira ao redor do Sol em 365,25 dias.</p>
+            <p>A Terra é o único planeta conhecido a abrigar vida. Com uma atmosfera rica em oxigênio, nitrogênio e outros gases, e coberta por água líquida em 70% de sua superfície, a Terra tem condições ideais para a vida. A nossa lua, que tem grande influência sobre as marés e a estabilização do eixo de rotação da Terra, é o único satélite natural. O planeta leva 365,25 dias para completar uma órbita ao redor do Sol, o que define o ano terrestre.</p>
             <ul>
-                <li><strong>Características:</strong> Planeta com vida e água líquida</li>
+                <li><strong>Características:</strong> Água líquida, atmosfera com oxigênio e nitrogênio, vida</li>
                 <li><strong>Temperatura:</strong> Média de 15°C</li>
                 <li><strong>Distância do Sol:</strong> 149,6 milhões de km</li>
-                <li><strong>Órbita:</strong> 365,25 dias terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 365,25 dias terrestres</li>
+                <li><strong>Luvas:</strong> 1 lua</li>
+                <li><strong>Descoberta:</strong> Conhecida desde a antiguidade, mas a exploração moderna começou com as viagens espaciais no século 20.</li>
             </ul>
         </section>
 
         <!-- Seção sobre Marte -->
         <section id="marte" class="info-section">
             <h2>Marte 🔴</h2>
-            <p>Marte é conhecido como o "planeta vermelho" devido ao óxido de ferro em sua superfície, o que lhe dá sua cor característica. Embora atualmente seja um deserto frio e árido, Marte já teve água líquida em seu passado e é um dos principais focos de pesquisa sobre a possibilidade de vida fora da Terra.</p>
+            <p>Marte, o planeta vermelho, é o quarto planeta do Sistema Solar. Sua cor característica é devido ao óxido de ferro, o que dá uma aparência avermelhada à sua superfície. Marte tem duas luas pequenas, Fobos e Deimos, e sua atmosfera é fina, composta principalmente de dióxido de carbono. Com uma temperatura média de -60°C, Marte é considerado um candidato para futuras missões de exploração e até colonização humana.</p>
             <ul>
-                <li><strong>Características:</strong> Superfície vermelha devido ao óxido de ferro, clima frio e árido</li>
+                <li><strong>Características:</strong> Superfície com ferrugem, calotas polares de gelo</li>
                 <li><strong>Temperatura:</strong> Média de -60°C</li>
                 <li><strong>Distância do Sol:</strong> 227,9 milhões de km</li>
-                <li><strong>Órbita:</strong> 687 dias terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 687 dias terrestres</li>
+                <li><strong>Luvas:</strong> 2 luas - Fobos e Deimos</li>
+                <li><strong>Descoberta:</strong> Conhecido desde a antiguidade, com missões espaciais enviando rovers como o Curiosity.</li>
             </ul>
         </section>
 
         <!-- Seção sobre Júpiter -->
         <section id="jupiter" class="info-section">
-            <h2>Júpiter 🌟</h2>
-            <p>Júpiter é o maior planeta do Sistema Solar, um gigante gasoso composto principalmente de hidrogênio e hélio. Sua característica mais notável é a Grande Mancha Vermelha, uma gigantesca tempestade. Júpiter possui várias luas, incluindo Ganímedes, a maior lua do Sistema Solar.</p>
+            <h2>Júpiter 🟠</h2>
+            <p>Júpiter é o maior planeta do Sistema Solar. Ele é um gigante gasoso composto principalmente de hidrogênio e hélio. Sua atmosfera possui a Grande Mancha Vermelha, uma enorme tempestade que ocorre há mais de 400 anos. Júpiter tem 79 luas conhecidas, incluindo Ganimedes, que é a maior lua do Sistema Solar, e Europa, que pode ter um oceano sob sua crosta de gelo, o que a torna um local potencial para vida extraterrestre.</p>
             <ul>
-                <li><strong>Características:</strong> Gigante gasoso com tempestades massivas e uma grande mancha vermelha</li>
-                <li><strong>Temperatura:</strong> -108°C</li>
+                <li><strong>Características:</strong> Gigante gasoso com a Grande Mancha Vermelha</li>
+                <li><strong>Temperatura:</strong> Média de -108°C</li>
                 <li><strong>Distância do Sol:</strong> 778,3 milhões de km</li>
-                <li><strong>Órbita:</strong> 11,86 anos terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 11,9 anos terrestres</li>
+                <li><strong>Luvas:</strong> 79 luas, incluindo Ganimedes, Calisto, Ío e Europa</li>
+                <li><strong>Descoberta:</strong> Conhecido desde a antiguidade, mas explorado por missões como Juno e Galileu.</li>
             </ul>
         </section>
 
         <!-- Seção sobre Saturno -->
         <section id="saturno" class="info-section">
-            <h2>Saturno 💫</h2>
-            <p>Saturno é famoso por seus anéis, compostos por gelo e rochas pequenas. Ele também é um gigante gasoso, e é o segundo maior planeta do Sistema Solar. Possui dezenas de luas, sendo Titã a maior e mais interessante, com uma atmosfera espessa e mares de metano.</p>
+            <h2>Saturno 🟡</h2>
+            <p>Saturno é famoso pelos seus impressionantes anéis compostos de partículas de gelo e rochas. Este gigante gasoso tem uma atmosfera semelhante à de Júpiter, mas com menos hidrogênio e mais compostos como metano. Saturno tem mais de 80 luas conhecidas, incluindo Titã, a segunda maior lua do Sistema Solar, que possui uma atmosfera densa e lagos de metano líquido.</p>
             <ul>
-                <li><strong>Características:</strong> Planeta com anéis compostos de partículas de gelo e rocha</li>
-                <li><strong>Temperatura:</strong> -178°C</li>
+                <li><strong>Características:</strong> Anéis compostos por gelo e rochas</li>
+                <li><strong>Temperatura:</strong> Média de -139°C</li>
                 <li><strong>Distância do Sol:</strong> 1,43 bilhões de km</li>
-                <li><strong>Órbita:</strong> 29,46 anos terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 29,5 anos terrestres</li>
+                <li><strong>Luvas:</strong> 83 luas conhecidas, incluindo Titã</li>
+                <li><strong>Descoberta:</strong> Saturno foi conhecido desde a antiguidade e explorado pela missão Cassini-Huygens.</li>
             </ul>
         </section>
 
         <!-- Seção sobre Urano -->
         <section id="urano" class="info-section">
-            <h2>Urano 🌙</h2>
-            <p>Urano é um planeta gasoso com uma inclinação axial extrema, o que faz com que ele gire de lado em relação aos outros planetas. Sua cor esverdeada é devido ao metano na sua atmosfera. Urano tem anéis muito tênues e várias luas.</p>
+            <h2>Urano 🟢</h2>
+            <p>Urano é um planeta gasoso com uma característica única: sua rotação é extremamente inclinada, fazendo com que ele gire de lado. Isso é causado pela colisão de Urano com outro corpo no início de sua formação. Sua atmosfera é composta principalmente de hidrogênio, hélio e metano, o que dá a ele uma cor azul-esverdeada. Urano tem 27 luas conhecidas, e é o único planeta que não pode ser visto a olho nu da Terra.</p>
             <ul>
-                <li><strong>Características:</strong> Gigante gasoso com rotação extrema</li>
-                <li><strong>Temperatura:</strong> -224°C</li>
+                <li><strong>Características:</strong> Rotação inclinada e atmosfera de metano</li>
+                <li><strong>Temperatura:</strong> Média de -224°C</li>
                 <li><strong>Distância do Sol:</strong> 2,87 bilhões de km</li>
-                <li><strong>Órbita:</strong> 84 anos terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 84 anos terrestres</li>
+                <li><strong>Luvas:</strong> 27 luas conhecidas</li>
+                <li><strong>Descoberta:</strong> Descoberto em 1781 por William Herschel.</li>
             </ul>
         </section>
 
         <!-- Seção sobre Netuno -->
         <section id="netuno" class="info-section">
-            <h2>Netuno 🌌</h2>
-            <p>Netuno é o planeta mais distante do Sistema Solar, e sua atmosfera contém neblinas e tempestades violentas. Ele tem ventos muito rápidos e uma cor azul brilhante devido ao metano. Netuno também tem algumas luas, incluindo Tritão, que orbita de maneira retrógrada.</p>
+            <h2>Netuno 🔵</h2>
+            <p>Netuno é o planeta mais distante do Sistema Solar. Ele é um gigante gasoso com uma atmosfera composta principalmente de hidrogênio, hélio e metano. A presença de metano é responsável pela sua cor azul vibrante. Netuno tem ventos extremamente fortes, os mais rápidos do Sistema Solar, e possui 14 luas conhecidas. Triston é a maior delas, e sua órbita é muito excêntrica e inclinada.</p>
             <ul>
-                <li><strong>Características:</strong> Planeta gasoso com ventos fortes e clima instável</li>
-                <li><strong>Temperatura:</strong> -218°C</li>
+                <li><strong>Características:</strong> Ventos fortes e atmosfera de metano</li>
+                <li><strong>Temperatura:</strong> Média de -218°C</li>
                 <li><strong>Distância do Sol:</strong> 4,5 bilhões de km</li>
-                <li><strong>Órbita:</strong> 164,8 anos terrestres para uma volta completa ao redor do Sol</li>
+                <li><strong>Órbita:</strong> 164,8 anos terrestres</li>
+                <li><strong>Luvas:</strong> 14 luas conhecidas, incluindo Tritão</li>
+                <li><strong>Descoberta:</strong> Descoberto em 1846 por Johann Galle.</li>
             </ul>
         </section>
+
     </main>
 
     <!-- Rodapé -->
     <footer>
         <p>&copy; 2024 Rafael Caetano Streiling - Projeto Escolar - Explorando os Planetas do Sistema Solar 🌌</p>
     </footer>
+
 </body>
 </html>
