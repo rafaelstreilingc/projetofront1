@@ -17,6 +17,7 @@
             color: white;
             line-height: 1.6;
             padding: 0;
+            transition: background-color 0.3s ease;
         }
 
         header {
@@ -48,7 +49,7 @@
 
         main {
             padding: 40px;
-            background-image: url('https://images.unsplash.com/photo-1518987324007-f1b57f6e7bc6'); 
+            background-image: url('https://images.unsplash.com/photo-1518987324007-f1b57f6e7bc6');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -59,6 +60,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         .info-section {
@@ -67,6 +69,11 @@
             border-radius: 15px;
             margin-bottom: 40px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease;
+        }
+
+        .info-section:hover {
+            transform: scale(1.02);
         }
 
         .info-section ul {
@@ -109,11 +116,12 @@
             border-radius: 10px;
             margin: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .card:hover {
             transform: scale(1.05);
+            background-color: rgba(255, 215, 0, 0.2);
         }
 
         .card h3 {
@@ -134,6 +142,40 @@
         .card ul li {
             font-size: 1rem;
             margin-bottom: 10px;
+        }
+
+        .card .button {
+            background-color: #FFD700;
+            color: #111;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 15px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .card .button:hover {
+            background-color: #FFAA00;
+        }
+
+        .toggle-theme-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #FFD700;
+            color: #111;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-theme-btn:hover {
+            background-color: #FFAA00;
         }
 
         @media (max-width: 768px) {
@@ -157,6 +199,8 @@
     </style>
 </head>
 <body>
+    <button class="toggle-theme-btn" onclick="toggleTheme()">🌙</button>
+
     <header>
         <div class="navbar">
             <h1>Explorando o Espaço Sideral 🚀✨</h1>
@@ -166,7 +210,7 @@
                 <a href="#estrelas">Estrelas</a>
                 <a href="#buracos-negros">Buracos Negros</a>
                 <a href="#curiosidades">Curiosidades</a>
-                <a href="#curiosidades">Futuras Missões</a>
+                <a href="#missões">Futuras Missões</a>
             </nav>
         </div>
     </header>
@@ -174,31 +218,30 @@
     <main>
         <section id="galaxias" class="info-section">
             <h2>Galáxias 🪐</h2>
-            <p>O Universo é repleto de <strong>galáxias</strong>, enormes aglomerados de estrelas, poeira, gás e matéria escura. Algumas das mais famosas incluem:</p>
+            <p>O Universo é repleto de <strong>galáxias</strong>, enormes aglomerados de estrelas, poeira, gás e matéria escura. Algumas das mais fascinantes incluem:</p>
             <div class="card">
                 <h3>Via Láctea 🌌</h3>
                 <p>A nossa galáxia, com mais de 100 bilhões de estrelas, é uma das mais conhecidas e estudadas. Ela contém o Sistema Solar e é uma galáxia espiral barrada.</p>
+                <a href="https://pt.wikipedia.org/wiki/Via_L%C3%A1ctea" class="button" target="_blank">Saiba mais</a>
             </div>
             <div class="card">
                 <h3>Andrômeda 🪐</h3>
-                <p>Andrômeda é a galáxia espiral mais próxima da nossa. Está a aproximadamente 2.5 milhões de anos-luz de distância.</p>
-            </div>
-            <div class="card">
-                <h3>Sombrero 🌠</h3>
-                <p>A galáxia Sombrero tem a forma de um grande disco, com um núcleo brilhante e é uma das galáxias mais impressionantes observadas até hoje.</p>
+                <p>Andrômeda é a galáxia espiral mais próxima da nossa. Está a aproximadamente 2.5 milhões de anos-luz de distância e em rota de colisão com a Via Láctea.</p>
+                <a href="https://pt.wikipedia.org/wiki/Gal%C3%A1xia_de_Andr%C3%B4meda" class="button" target="_blank">Saiba mais</a>
             </div>
         </section>
 
         <section id="planetas" class="info-section">
             <h2>Planetas 🌍</h2>
-            <p>Os planetas são corpos celestes que orbitam uma estrela. Alguns dos planetas do nosso sistema solar incluem:</p>
+            <p>Os planetas são corpos celestes que orbitam uma estrela. Alguns dos planetas mais notáveis do nosso sistema solar incluem:</p>
             <div class="card">
                 <h3>Mercúrio ☀️</h3>
-                <p>O planeta mais próximo do Sol, Mercúrio é um mundo árido e sem atmosfera densa, com temperaturas extremas.</p>
+                <p>O planeta mais próximo do Sol, Mercúrio, é um mundo árido e sem atmosfera densa, com temperaturas extremas.</p>
             </div>
             <div class="card">
                 <h3>Vênus 🌋</h3>
-                <p>Conhecido como a "irmã" da Terra, Vênus tem um clima infernal devido ao seu efeito estufa descontrolado.</p>
+                <p>Vênus, com sua atmosfera densa e quente, é conhecido como o "planeta irmão" da Terra devido ao seu tamanho similar, mas é um lugar hostil.</p>
+                <a href="https://pt.wikipedia.org/wiki/V%C3%AAnus_(planeta)" class="button" target="_blank">Saiba mais</a>
             </div>
             <div class="card">
                 <h3>Terra 🌍</h3>
@@ -208,18 +251,18 @@
 
         <section id="estrelas" class="info-section">
             <h2>Estrelas 🌟</h2>
-            <p>As estrelas são enormes esferas de plasma que emitem luz e calor. Algumas das mais famosas incluem:</p>
+            <p>As estrelas são enormes esferas de plasma que emitem luz e calor. Algumas das estrelas mais famosas incluem:</p>
             <div class="card">
                 <h3>Sirius ✨</h3>
-                <p>Sirius é a estrela mais brilhante do céu, localizada na constelação do Cão Maior. Ela é uma estrela binária, composta por Sirius A e Sirius B.</p>
+                <p>Sirius é a estrela mais brilhante do céu. Ela faz parte do sistema binário Sirius A e Sirius B, localizados na constelação do Cão Maior.</p>
             </div>
             <div class="card">
                 <h3>Betelgeuse 🔴</h3>
-                <p>Uma supergigante vermelha na constelação de Órion. Betelgeuse está prestes a se tornar uma supernova.</p>
+                <p>Uma supergigante vermelha localizada na constelação de Órion. Está perto de entrar em sua fase final e se tornar uma supernova.</p>
             </div>
             <div class="card">
                 <h3>Sol 🌞</h3>
-                <p>A nossa estrela, o Sol, fornece luz e energia à Terra. Ele está no meio da sua vida útil e possui um núcleo a mais de 15 milhões de graus Celsius.</p>
+                <p>O Sol é a estrela que fornece luz e energia para a Terra, essencial para a vida como a conhecemos.</p>
             </div>
         </section>
 
@@ -227,24 +270,47 @@
             <h2>Buracos Negros 🕳️</h2>
             <p>Buracos negros são regiões do espaço onde a gravidade é tão intensa que nada pode escapar, nem mesmo a luz!</p>
             <div class="card">
-                <h3>Buraco Negro Supermassivo 🌑</h3>
-                <p>Localizados nos centros de muitas galáxias, esses buracos negros possuem uma massa milhões de vezes maior que a do Sol.</p>
+                <h3>Buraco Negro Supermassivo 🌌</h3>
+                <p>Buracos negros supermassivos estão localizados nos centros das galáxias. O buraco negro supermassivo de nossa galáxia é conhecido como Sagitário A*.</p>
+                <a href="https://pt.wikipedia.org/wiki/Buraco_negro_supermassivo" class="button" target="_blank">Saiba mais</a>
             </div>
         </section>
 
-        <section id="curiosidades" class="info-section">
-            <h2>Curiosidades do Espaço 👽</h2>
-            <ul>
-                <li>O espaço não tem som! O som precisa de um meio para se propagar, como o ar, e no espaço há vácuo! 🎧</li>
-                <li>O maior planeta do sistema solar é Júpiter, com mais de 75 luas! 🌙</li>
-                <li>O maior conhecido buraco negro supermassivo está no centro da galáxia M87! 🌑</li>
-            </ul>
+        <section id="missões" class="info-section">
+            <h2>Futuras Missões Espaciais 🚀</h2>
+            <p>O futuro da exploração espacial é muito promissor, com várias missões planejadas para os próximos anos:</p>
+            <div class="card">
+                <h3>Missão Artemis 🌑</h3>
+                <p>A NASA está planejando enviar astronautas à Lua até 2025 com a missão Artemis, e estabelecer uma base lunar.</p>
+            </div>
+            <div class="card">
+                <h3>Missão Mars Sample Return 🔴</h3>
+                <p>Uma missão colaborativa da NASA e ESA para trazer amostras do solo de Marte para a Terra.</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Projeto Escolar - Explorando o Espaço Sideral. Todos os direitos reservados. 🌌</p>
-        <p>Desenvolvido como parte de um projeto escolar de ciências sobre o espaço sideral. 📝</p>
+        <p>&copy; 2024 Projeto Escolar - Explorando o Espaço Sideral 🌌</p>
     </footer>
+
+    <script>
+        let theme = 'light';
+        const button = document.querySelector('.toggle-theme-btn');
+
+        function toggleTheme() {
+            if (theme === 'light') {
+                document.body.style.backgroundColor = '#111';
+                document.body.style.color = '#fff';
+                theme = 'dark';
+                button.textContent = '🌙';
+            } else {
+                document.body.style.backgroundColor = '#fff';
+                document.body.style.color = '#111';
+                theme = 'light';
+                button.textContent = '☀️';
+            }
+        }
+    </script>
 </body>
 </html>
