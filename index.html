@@ -6,113 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema Solar - Exploração Espacial</title>
 
-    <!-- Importação das fontes do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
-<style>
-    /* Estilos globais para resetar margens e paddings */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Corpo do documento: Fonte, cor de fundo e cor do texto */
-    body {
-        font-family: 'Open Sans', sans-serif; /* Definindo fonte padrão */
-        background-color: #121212; /* Cor de fundo escura */
-        color: #fff; /* Cor do texto em branco */
-        line-height: 1.6; /* Ajuste no espaçamento das linhas para legibilidade */
-    }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+        }
 
-    /* Títulos principais com fonte personalizada */
-    h1, h2 {
-        font-family: 'Poppins', sans-serif; /* Usando fonte Poppins para títulos */
-        color: #EAAA00; /* Cor amarela para destacar os títulos */
-    }
+        h1, h2 {
+            font-family: "Righteous", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-    /* Estilo da barra de navegação */
-    nav {
-        background-color: #333; /* Cor de fundo escura */
-        padding: 20px;
-        text-align: center; /* Alinha os itens no centro */
-    }
+        nav {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
 
-    /* Links de navegação */
-    nav a {
-        color: #EAAA00; /* Cor amarela para os links */
-        text-decoration: none; /* Remove o sublinhado */
-        font-size: 1.2rem;
-        margin: 0 15px; /* Espaço entre os links */
-        font-weight: bold;
-    }
+        nav a {
+            color: #EAAA00;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-    /* Efeito quando o usuário passa o mouse sobre os links */
-    nav a:hover {
-        color: #fff; /* Muda a cor para branco ao passar o mouse */
-    }
+        nav a:hover {
+            color: #fff;
+        }
 
-    /* Seções que contêm informações sobre os planetas */
-    section {
-        padding: 40px;
-        margin: 20px;
-        background-color: #1e1e1e; /* Cor de fundo escura para contraste */
-        border-radius: 10px; /* Bordas arredondadas */
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra suave */
-    }
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
 
-    /* Estilo das imagens dos planetas */
-    .planet-section img {
-        width: 150px; /* Largura da imagem */
-        height: 150px; /* Altura da imagem */
-        border-radius: 5px; /* Bordas arredondadas nas imagens */
-        margin-bottom: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        .planet-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* Estilo dos subtítulos em cada seção */
-    .planet-section h2 {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2rem;
-        margin-bottom: 15px;
-    }
+        .planet-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
 
-    /* Listas dentro das seções */
-    .planet-section ul {
-        list-style-type: none; /* Remove os marcadores de lista */
-    }
+        .planet-section ul {
+            list-style-type: none;
+        }
 
-    /* Estilo dos itens da lista */
-    .planet-section ul li {
-        margin: 10px 0; /* Espaço entre os itens */
-    }
+        .planet-section ul li {
+            margin: 10px 0;
+        }
 
-    /* Destaque em elementos importantes dentro das listas */
-    .planet-section ul li strong {
-        color: #ffdd57; /* Cor amarela para destacar informações importantes */
-    }
+        .planet-section ul li strong {
+            color: #ffdd57;
+        }
 
-    /* Estilos para a seção de planetas anões */
-    #planetas-anoes {
-        background-color: #2c2c2c; /* Cor de fundo diferente para destacar */
-    }
+        #planetas-anoes {
+            background-color: #2c2c2c;
+        }
 
-    /* Centraliza a logo na página */
-    .logo-container {
-        display: flex;
-        justify-content: center; /* Alinha a logo ao centro */
-        margin: 20px 0; /* Espaçamento acima e abaixo */
-    }
+        /* Estilo para a logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
 
-    /* Tamanho da logo */
-    .logo-container img {
-        width: 150px;
-        height: 150px;
-    }
-</style>
-
+        .logo-container img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
 </head>
 <body>
  
