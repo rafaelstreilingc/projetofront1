@@ -9,95 +9,158 @@
     <!-- Importação das fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema Solar - Exploração Espacial</title>
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: #121212;
-            color: #fff;
-            line-height: 1.6;
-        }
+    <!-- Importação das fontes do Google Fonts para personalizar a tipografia -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@500&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegação principal -->
+    <nav>
+        <!-- Logo da página -->
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/rafaelstreilingc/projetofront1/refs/heads/main/O%20SISTEMA%20SOLAR.png" alt="Logo do Sistema Solar">
+        </div>
+        <!-- Links de navegação para as seções dos planetas -->
+        <a href="#mercurio">Mercúrio</a>
+        <a href="#venus">Vênus</a>
+        <a href="#terra">Terra</a>
+        <a href="#marte">Marte</a>
+        <a href="#jupiter">Júpiter</a>
+        <a href="#saturno">Saturno</a>
+        <a href="#urano">Urano</a>
+        <a href="#netuno">Netuno</a>
+        <a href="#planetas-anoes">Planetas Anões</a>
+    </nav>
 
-        h1, h2 {
-            font-family: 'Poppins', sans-serif;
-            color: #EAAA00;
-        }
+    <main>
+        <!-- Seção do Mercúrio -->
+        <section id="mercurio" class="planet-section">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/3D_Mercury.png" alt="Mercúrio">
+            <h2>Mercúrio</h2>
+            <p>Mercúrio é o planeta mais próximo do Sol e o menor do Sistema Solar...</p>
+            <ul>
+                <li><strong>Composição:</strong> Rocosa, composta principalmente de ferro.</li>
+                <li><strong>Atmosfera:</strong> Muito fina...</li>
+                <li><strong>Características:</strong> Alta variação de temperatura...</li>
+            </ul>
+        </section>
+        <!-- Seções para outros planetas aqui... -->
+    </main>
 
-        nav {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-        }
+</body>
+</html>
 
-        nav a {
-            color: #EAAA00;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+<style>
+    /* Estilos globais para resetar margens e paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        nav a:hover {
-            color: #fff;
-        }
+    /* Corpo do documento: Fonte, cor de fundo e cor do texto */
+    body {
+        font-family: 'Open Sans', sans-serif; /* Definindo fonte padrão */
+        background-color: #121212; /* Cor de fundo escura */
+        color: #fff; /* Cor do texto em branco */
+        line-height: 1.6; /* Ajuste no espaçamento das linhas para legibilidade */
+    }
 
-        section {
-            padding: 40px;
-            margin: 20px;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
+    /* Títulos principais com fonte personalizada */
+    h1, h2 {
+        font-family: 'Poppins', sans-serif; /* Usando fonte Poppins para títulos */
+        color: #EAAA00; /* Cor amarela para destacar os títulos */
+    }
 
-        .planet-section img {
-            width: 150px;
-            height: 150px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    /* Estilo da barra de navegação */
+    nav {
+        background-color: #333; /* Cor de fundo escura */
+        padding: 20px;
+        text-align: center; /* Alinha os itens no centro */
+    }
 
-        .planet-section h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
+    /* Links de navegação */
+    nav a {
+        color: #EAAA00; /* Cor amarela para os links */
+        text-decoration: none; /* Remove o sublinhado */
+        font-size: 1.2rem;
+        margin: 0 15px; /* Espaço entre os links */
+        font-weight: bold;
+    }
 
-        .planet-section ul {
-            list-style-type: none;
-        }
+    /* Efeito quando o usuário passa o mouse sobre os links */
+    nav a:hover {
+        color: #fff; /* Muda a cor para branco ao passar o mouse */
+    }
 
-        .planet-section ul li {
-            margin: 10px 0;
-        }
+    /* Seções que contêm informações sobre os planetas */
+    section {
+        padding: 40px;
+        margin: 20px;
+        background-color: #1e1e1e; /* Cor de fundo escura para contraste */
+        border-radius: 10px; /* Bordas arredondadas */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra suave */
+    }
 
-        .planet-section ul li strong {
-            color: #ffdd57;
-        }
+    /* Estilo das imagens dos planetas */
+    .planet-section img {
+        width: 150px; /* Largura da imagem */
+        height: 150px; /* Altura da imagem */
+        border-radius: 5px; /* Bordas arredondadas nas imagens */
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-        #planetas-anoes {
-            background-color: #2c2c2c;
-        }
+    /* Estilo dos subtítulos em cada seção */
+    .planet-section h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
 
-        /* Estilo para a logo */
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
+    /* Listas dentro das seções */
+    .planet-section ul {
+        list-style-type: none; /* Remove os marcadores de lista */
+    }
 
-        .logo-container img {
-            width: 150px;
-            height: 150px;
-        }
-    </style>
+    /* Estilo dos itens da lista */
+    .planet-section ul li {
+        margin: 10px 0; /* Espaço entre os itens */
+    }
+
+    /* Destaque em elementos importantes dentro das listas */
+    .planet-section ul li strong {
+        color: #ffdd57; /* Cor amarela para destacar informações importantes */
+    }
+
+    /* Estilos para a seção de planetas anões */
+    #planetas-anoes {
+        background-color: #2c2c2c; /* Cor de fundo diferente para destacar */
+    }
+
+    /* Centraliza a logo na página */
+    .logo-container {
+        display: flex;
+        justify-content: center; /* Alinha a logo ao centro */
+        margin: 20px 0; /* Espaçamento acima e abaixo */
+    }
+
+    /* Tamanho da logo */
+    .logo-container img {
+        width: 150px;
+        height: 150px;
+    }
+</style>
+
 </head>
 <body>
  <div class="logo-container">
